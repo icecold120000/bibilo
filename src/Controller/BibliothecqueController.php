@@ -55,7 +55,7 @@ class BibliothecqueController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="bibliothecque_detele_veiw", methods={"GET"})
+     * @Route("/{id}", name="bibliothecque_delete_view", methods={"GET"})
      */
     public function delete_view(Bibliothecque $bibliothecque): Response
     {

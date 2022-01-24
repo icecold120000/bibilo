@@ -118,3 +118,28 @@ table a.btn.btn-info{
     margin: 12px 0;
     font-size: 15px;
 }
+
+
+.formEntité2 form, #formRegister form{
+    display: flex;
+    justify-content: center;
+}
+
+.formEntité2 .erreur li{
+    right: 1%;
+    text-align: left;
+    font-size: 15px;
+}
+
+.formEntité2 input{
+    width: 80%;
+    position: relative;
+    right: 10%;
+    height: 30px;
+    font-size: 15px;
+}
+
+.formEntité2 select{
+    font-size: 20px;
+    display: flex;
+}

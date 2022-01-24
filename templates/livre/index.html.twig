@@ -30,12 +30,18 @@
         <tbody>
         {% for livre in livres %}
             <tr>
+                <td>
+                    {% if livre.afficheLivre%}
+                        <img src="{{ asset('uploads/affiche/' ~ livre.afficheLivre) }}" id="imgEvent" alt="image de l'événement">
+                    {% else %}
+                        <img src="{{ asset('/static/images/placeholder.png') }}" id="imgEvent" alt="place holder">
+                    {% endif %}
+                </td>
                 <td>{{ livre.titreLivre }}</td>
                 <td>{{ livre.genreLivre }}</td>
                 <td>{{ livre.dateLivre ? livre.dateLivre|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ livre.afficheLivre }}</td>
                 <td>{{ livre.noteLivre ? livre.noteLivre : 'Aucune note'}}</td>
-                <td>{{ livre.commentaireLivre ? livre.commentaire : 'Aucun commentaire'}}</td>
+                <td>{{ livre.commentaireLivre ? livre.commentaireLivre : 'Aucun commentaire'}}</td>
                 <td>
                     <a href="{{ path('livre_edit',
                         {'id': livre.id}) }}" class="btn btn-primary">

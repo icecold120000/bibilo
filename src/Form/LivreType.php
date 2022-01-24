@@ -21,6 +21,14 @@ class LivreType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
+
+        if ($options['row_attr']['route'] == "livre_new") {
+            $required = true;
+        }
+        else{
+            $required = false;
+        }
+
         $builder
             ->add('titreLivre', TextType::class,[
                 'label' => 'Nom du livre',
@@ -49,7 +57,7 @@ class LivreType extends AbstractType
                 'label' => 'L\'affiche du livre ',
                 'help' => 'Type de fichier supporté : png, jpg ou jpeg.',
                 'mapped' => false,
-                'required' => true,
+                'required' => $required,
                 'constraints' => [
                     new File([
                         'maxSize' => '1024k',

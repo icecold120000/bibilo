@@ -4,8 +4,6 @@
 
 {% block body %}
 
-
-    {{ include('livre/_delete_form.html.twig') }}
     <main>
         <h1>Editer un livre</h1>
 
@@ -16,13 +14,13 @@
         {% endfor %}
 
         <div>
-            <div class="container-fluid" id="biblioForm">
+            <div class="container-fluid formEntité2" id="livreForm">
                 {{ include('livre/_form.html.twig') }}
             </div>
         </div>
         <div class="row">
             <div id="divAjout">
-                <button type="submit" class="btn btn-success" form="formBibilio">
+                <button type="submit" class="btn btn-success" form="formLivre">
                     Modifier le livre
                 </button>
                 <a href="{{ path('livre_index') }}"
