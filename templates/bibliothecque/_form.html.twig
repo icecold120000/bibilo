@@ -1,0 +1,12 @@
+{{ form_start(form) }}
+    {{form_label(form.nomBiblio)}}
+    {{form_help(form.nomBiblio)}}
+    <div id="divInput">
+        {{form_widget(form.nomBiblio)}}
+    </div>
+    {% if form_errors(form.nomBiblio) %}
+        <div class="erreur">
+            {{form_errors(form.nomBiblio)}}
+        </div>
+    {% endif %}
+{{ form_end(form) }}

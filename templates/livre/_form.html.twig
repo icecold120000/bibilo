@@ -1,0 +1,69 @@
+{{ form_start(form) }}
+    <div id="part1">
+        {{form_label(form.titreLivre)}}
+        <div id="divInput">
+            {{form_widget(form.titreLivre)}}
+        </div>
+        {% if form_errors(form.titreLivre) %}
+            <div class="erreur">
+                {{form_errors(form.titreLivre)}}
+            </div>
+        {% endif %}
+        {{form_label(form.genreLivre)}}
+        <div id="divInput">
+            {{form_widget(form.genreLivre)}}
+        </div>
+        {% if form_errors(form.genreLivre) %}
+            <div class="erreur">
+                {{form_errors(form.genreLivre)}}
+            </div>
+        {% endif %}
+        {{form_label(form.dateLivre)}}
+        <div id="divInput">
+            {{form_widget(form.dateLivre)}}
+        </div>
+        {% if form_errors(form.dateLivre) %}
+            <div class="erreur">
+                {{form_errors(form.dateLivre)}}
+            </div>
+        {% endif %}
+        {{form_label(form.afficheLivre)}}
+        <div id="divInput">
+            {{form_widget(form.afficheLivre)}}
+        </div>
+        {% if form_errors(form.afficheLivre) %}
+            <div class="erreur">
+                {{form_errors(form.afficheLivre)}}
+            </div>
+        {% endif %}
+    </div>
+    <div id="part2">
+        {{form_label(form.bibliothecque)}}
+        <div id="divInput">
+            {{form_widget(form.bibliothecque)}}
+        </div>
+        {% if form_errors(form.bibliothecque) %}
+            <div class="erreur">
+                {{form_errors(form.bibliothecque)}}
+            </div>
+        {% endif %}
+        {{form_label(form.noteLivre)}}
+        <div id="divInput">
+            {{form_widget(form.noteLivre)}}
+        </div>
+        {% if form_errors(form.noteLivre) %}
+            <div class="erreur">
+                {{form_errors(form.noteLivre)}}
+            </div>
+        {% endif %}
+        {{form_label(form.commentaireLivre)}}
+        <div id="divInput">
+            {{form_widget(form.commentaireLivre)}}
+        </div>
+        {% if form_errors(form.commentaireLivre) %}
+            <div class="erreur">
+                {{form_errors(form.commentaireLivre)}}
+            </div>
+        {% endif %}
+    </div>
+{{ form_end(form) }}

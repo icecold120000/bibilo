@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomepageController!{% endblock %}
+
+{% block body %}
+<main>
+    <h1>Bienvenue dans l'accueil</h1>
+
+    <h2>Vos access :</h2>
+
+    <a href="{{ path('livre_index') }}">Gestion des livres</a>
+    <a href="{{ path('bibliothecque_index') }}">Gestion des bibliothèques</a>
+</main>
+{% endblock %}
