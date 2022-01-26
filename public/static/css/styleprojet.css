@@ -55,10 +55,6 @@ p{
     font-size: 15px;
 }
 
-#divInput{
-    width: 100%;
-}
-
 .flash-success{
     font-size: 25px;
     color: green;
@@ -120,9 +116,40 @@ table a.btn.btn-info{
 }
 
 
-.formEntité2 form, #formRegister form{
+/*Formulaire d'ajout et de modification des entités*/
+
+.formEntité div.container-fluid{
+    display: inline-block;
+    position: relative;
+    right: 20%;
+}
+
+.formEntité form{
+    display: flex;
+    flex-direction: column;
+}
+
+.formEntité input{
+    width: 50%;
+    height: 30px;
+    font-size: 15px;
+}
+
+.formEntité div.fileInput input{
+    width: unset;
+}
+
+.formEntité select{
+    font-size: 20px;
+}
+
+.formEntité2 form{
     display: flex;
     justify-content: center;
+}
+
+.formEntité2 #part1 {
+    align-items: unset;
 }
 
 .formEntité2 .erreur li{
@@ -141,5 +168,9 @@ table a.btn.btn-info{
 
 .formEntité2 select{
     font-size: 20px;
+    display: flex;
+}
+
+.formEntité2 label, .formEntité2 .help-text{
     display: flex;
 }
